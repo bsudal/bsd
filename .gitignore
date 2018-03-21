@@ -25,8 +25,8 @@ nb-configuration.xml
 
 # Eclipse
 .classpath
-.project
-.settings/
+# .project
+# .settings/
 
 # Intellij
 .idea/
