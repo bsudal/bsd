@@ -10,6 +10,7 @@ public class ConnectionUtil {
 	public static String ID = "root";
 	public static String PASSWORD = "Bsgay1234!";
 	public static String url = "jdbc:mysql://221.164.9.30:3306/bsg";
+//	public static String url = "jdbc:mysql://localhost:3307/bsg";
 	static {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -18,7 +19,6 @@ public class ConnectionUtil {
 		}
 	}
 	public static Connection getConnection() throws SQLException, ClassNotFoundException {
-		System.out.println("con:" + con);
 		if ( con == null ) {
 			con = DriverManager.getConnection(url, ID, PASSWORD);
 		}

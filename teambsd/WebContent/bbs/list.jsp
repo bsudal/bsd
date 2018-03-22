@@ -14,24 +14,35 @@
 	<jsp:param value="게시판" name="title"/>
 </jsp:include>
 
-<div class="container">
-	<div class="row bg-secondary my-3">
-	
+<div class="container pb-2">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+	    	<li class="breadcrumb-item active" aria-current="page">BBS</li>
+	  	</ol>
+	</nav>
 	<%
 		for(Bbs bbs : list) {
 	%>
-			<div class="col-2"><%=bbs.getId() %>	</div>
-			<div class="col-2"><%=bbs.getId_user() %>	</div>
-			<div class="col"><a href="detail.jsp"><%=bbs.getContent() %></a>	</div>
+	<div class="card my-1">
+		<div class="card-body" style="height:150px;">
+			<a href="delete.jsp?id=<%=bbs.getId()%>">
+				<button type="button" class="close" aria-label="Close">
+		  			<span aria-hidden="true">&times;</span>
+				</button>
+			</a>
+			<a href="detail.jsp?id=<%= bbs.getId() %>"><%= bbs.getContent() %></a>
+		</div>
+		<div class="card-body text-right"><%= bbs.getSys_modified_date() %></div>
+	</div>	
 	<% 
 		}
 	%>
-	</div>
-	<div class="row">
-		<div class="col">글 개수</div>
-		<div class="col"><%=list.size() %></div>
-	</div>
+</div>
 
+<div style="position: fixed; right: 15%; bottom: 100px;">
+	<a href="writeform.jsp" class="btn btn-danger" id="main" style="border-radius: 50%;padding: .500rem;">
+		<i class="fas fa-pen-square fa-lg"></i>        
+	</a>
 </div>
 
 <jsp:include page="/template/bottom.jsp"></jsp:include>	
