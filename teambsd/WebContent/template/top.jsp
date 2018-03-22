@@ -59,10 +59,7 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 				  	<li class="nav-item ">
-						<a class="nav-link" href="#">메뉴1</a>
-				  	</li>
-				  	<li class="nav-item ">
-						<a class="nav-link" href="#">메뉴2</a>
+						<a class="nav-link" href="/teambsd/bbs/list.jsp">BBS</a>
 				  	</li>
 				</ul>
 			</div>

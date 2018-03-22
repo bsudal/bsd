@@ -1,4 +1,4 @@
-package teambsd;
+package teambsd.bbs;
 
 import java.sql.Timestamp;
 
